@@ -4,29 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Chatbot</title>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 </head>
 <body>
+
     <h2>Welcome to My Chatbot!</h2>
-    <input type="text" id="userInput" placeholder="Type your message here">
-    <button onclick="sendMessage()">Send</button>
-    <p id="botResponse"></p>
 
-    <script>
-       async function sendMessage() {
-    let userInput = document.getElementById("userInput").value;
-    
-    let response = await fetch("https://rezabbasi.app.n8n.cloud/webhook-test/Persona-chatbot", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userInput })
-    });
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-    let data = await response.json();
-    console.log("Response from chatbot:", data); // Debugging output
-
-    // Ensure the correct key is used to extract the response
-    document.getElementById("botResponse").innerText = data.output || "No response from chatbot";
-}
+        createChat({
+            webhookUrl: "https://rezabbasi.app.n8n.cloud/webhook/Persona-chatbot",
+            mode: "window",
+            showWelcomeScreen: true
+        });
     </script>
+
 </body>
 </html>
