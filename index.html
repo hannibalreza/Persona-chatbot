@@ -12,16 +12,21 @@
     <p id="botResponse"></p>
 
     <script>
-        async function sendMessage() {
-            let userInput = document.getElementById("userInput").value;
-            let response = await fetch("https://rezabbasi.app.n8n.cloud/webhook-test/Persona-chatbot", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ message: userInput })
-            });
-            let data = await response.json();
-            document.getElementById("botResponse").innerText = data.reply;
-        }
+       async function sendMessage() {
+    let userInput = document.getElementById("userInput").value;
+    
+    let response = await fetch("https://rezabbasi.app.n8n.cloud/webhook-test/Persona-chatbot", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: userInput })
+    });
+
+    let data = await response.json();
+    console.log("Response from chatbot:", data); // Debugging output
+
+    // Ensure the correct key is used to extract the response
+    document.getElementById("botResponse").innerText = data.output || "No response from chatbot";
+}
     </script>
 </body>
 </html>
