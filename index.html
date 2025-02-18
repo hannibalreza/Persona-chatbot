@@ -14,7 +14,7 @@
     <script>
         async function sendMessage() {
             let userInput = document.getElementById("userInput").value;
-            let response = await fetch("https://rezabbasi.app.n8n.cloud/webhook-test/persona-chatbot", {
+            let response = await fetch("https://rezabbasi.app.n8n.cloud/webhook-test/Persona-chatbot", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ message: userInput })
