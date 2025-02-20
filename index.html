@@ -10,49 +10,42 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
         body {
-            background-color: #F0F4F8;
+            background-color: #f8f9fa;
             color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-            overflow: hidden;
         }
         .container {
+            max-width: 1000px;
+            margin: 50px auto;
             background: white;
-            padding: 20px;
-            width: 80%;
-            max-width: 800px;
+            padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
         .header {
             display: flex;
             align-items: center;
-            gap: 20px;
+            justify-content: space-between;
         }
-        .profile-pic {
-            width: 100px;
-            height: 100px;
-            background: #4CAF50;
+        .profile-pic img {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 14px;
-            color: white;
+            object-fit: cover;
+        }
+        .intro {
+            text-align: left;
         }
         h1 {
-            font-size: 24px;
-            text-transform: uppercase;
+            font-size: 32px;
+            font-weight: bold;
         }
         h2 {
-            font-size: 18px;
+            font-size: 22px;
             margin-top: 20px;
-            border-bottom: 2px solid #4CAF50;
+            border-bottom: 2px solid #2E7D32;
             padding-bottom: 5px;
         }
         p, li {
@@ -61,6 +54,21 @@
         }
         ul {
             margin-left: 20px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-right: 10px;
+            text-decoration: none;
+            color: white;
+            background: #2E7D32;
+            border-radius: 6px;
+        }
+        .btn.secondary {
+            background: #333;
         }
         #n8n-chat {
             position: fixed;
@@ -72,37 +80,37 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="profile-pic">ADD IMAGE</div>
-            <div>
-                <h1>The Profit Wizard</h1>
+            <div class="intro">
+                <h1>The Profit Wizard (Alex)</h1>
                 <p>Experienced Hospitality Entrepreneur</p>
+                
+            </div>
+            <div class="profile-pic">
+                <img src="https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg" alt="Profile Picture">
             </div>
         </div>
 
-        <h2>Overview</h2>
-        <p>An expert in optimizing business operations and margins, ensuring stability and profitability in hospitality.</p>
+        <h2>About Me</h2>
+        <p>Optimizing business operations and margins for stable profitability.</p>
         
         <h2>Key Skills</h2>
         <ul>
-            <li>Precise cost tracking</li>
-            <li>Supplier and product evaluation</li>
-            <li>Recipe and portion standardization</li>
-            <li>Investment in efficient kitchen processes</li>
-            <li>Critical staff and budget management</li>
+            <li>Cost tracking & supplier evaluation</li>
+            <li>Standardized recipes & portioning</li>
+            <li>Efficient kitchen investment</li>
+            <li>Budget & staff management</li>
         </ul>
 
         <h2>Needs & Challenges</h2>
         <ul>
-            <li>Reliable deliveries and consistent quality</li>
-            <li>Competitive pricing and fixed price agreements</li>
-            <li>Efficient ordering and invoicing</li>
-            <li>Balancing cost control with quality maintenance</li>
-            <li>Handling supplier price fluctuations</li>
-            <li>Innovating within tight budgets</li>
+            <li>Reliable suppliers & pricing</li>
+            <li>Efficient ordering & invoicing</li>
+            <li>Balancing cost & quality</li>
+            <li>Handling price fluctuations</li>
         </ul>
 
         <h2>Expectations</h2>
-        <p>Looking for reliable food service partners offering transparent pricing, efficient tools, and consistent service.</p>
+        <p>Seeking reliable partners with transparent pricing & efficiency.</p>
     </div>
     <script type="module">
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
