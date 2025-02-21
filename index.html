@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Profit Wizard - Resume</title>
+    <title>The Profit Wizard</title>
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     <style>
         * {
@@ -13,134 +13,133 @@
             font-family: 'Poppins', sans-serif;
         }
         body {
-            background-color: #f8f9fa;
+            background-color: #ffffff;
             color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px;
         }
         .container {
-            max-width: 1000px;
-            margin: 50px auto;
+            max-width: 1100px;
             background: white;
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        .header {
-            display: flex;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
             align-items: center;
-            justify-content: space-between;
         }
         .profile-pic img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
             object-fit: cover;
+            display: block;
         }
-        .intro {
-            text-align: left;
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .highlight-box {
+            background: #2E7D32;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .box {
+            background: #eaf5ea;
+            padding: 20px;
+            border-radius: 10px;
         }
         h1 {
-            font-size: 32px;
+            font-size: 36px;
             font-weight: bold;
+            color: #2E7D32;
         }
         h2 {
             font-size: 22px;
-            margin-top: 20px;
-            border-bottom: 2px solid #2E7D32;
-            padding-bottom: 5px;
+            color: #2E7D32;
         }
         p, li {
             font-size: 16px;
-            margin-top: 10px;
+            line-height: 1.6;
         }
         ul {
             margin-left: 20px;
-        }
-        .buttons {
-            margin-top: 20px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-right: 10px;
-            text-decoration: none;
-            color: white;
-            background: #2E7D32;
-            border-radius: 6px;
-        }
-        .btn.secondary {
-            background: #333;
-        }
-        #n8n-chat {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="intro">
-                <h1>The Profit Wizard (Alex)</h1>
-                <p>Experienced Hospitality Entrepreneur</p>
-                
+        <div class="info-section">
+            <div class="box">
+                <h2>Who I Am</h2>
+                <p>I am a dedicated entrepreneur focused on efficiency and profitability in hospitality. I optimize operations, reduce waste, and maintain high quality.</p>
             </div>
-            <div class="profile-pic">
-                <img src="https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg" alt="Profile Picture">
+            <div class="box">
+                <h2>How I Work</h2>
+                <ul>
+                    <li>I carefully manage food costs and supplier relationships.</li>
+                    <li>I use standardized recipes to ensure consistency.</li>
+                    <li>I invest in efficient kitchen tools and processes.</li>
+                    <li>I optimize staff planning to reduce labor costs.</li>
+                    <li>I constantly seek smarter ways to improve profitability.</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>What I Need in a Business Partner</h2>
+                <ul>
+                    <li><strong>Reliable</strong> deliveries and consistent quality.</li>
+                    <li><strong>Competitive</strong> pricing with fixed agreements.</li>
+                    <li><strong>Clear communication</strong> on price changes.</li>
+                    <li>A <strong>simple</strong> ordering system.</li>
+                    <li><strong>Accurate invoices</strong> and cost analysis tools.</li>
+                    <li>A broad supplier network to <strong>reduce dependency</strong>.</li>
+                </ul>
             </div>
         </div>
-
-        <h2>About Me</h2>
-        <p>Optimizing business operations and margins for stable profitability.</p>
-        
-        <h2>Key Skills</h2>
-        <ul>
-            <li>Cost tracking & supplier evaluation</li>
-            <li>Standardized recipes & portioning</li>
-            <li>Efficient kitchen investment</li>
-            <li>Budget & staff management</li>
-        </ul>
-
-        <h2>Needs & Challenges</h2>
-        <ul>
-            <li>Reliable suppliers & pricing</li>
-            <li>Efficient ordering & invoicing</li>
-            <li>Balancing cost & quality</li>
-            <li>Handling price fluctuations</li>
-        </ul>
-
-        <h2>Expectations</h2>
-        <p>Seeking reliable partners with transparent pricing & efficiency.</p>
+        <div class="profile-pic">
+            <img src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg" alt="Profile Picture">
+        </div>
     </div>
-    <script type="module">
-        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-        createChat({
-            webhookUrl: "https://rezabbasi.app.n8n.cloud/webhook/Persona-chatbot",
-            webhookConfig: {
-                method: 'POST',
-                headers: {}
+    <div class="highlight-box">
+        "Every cent counts. We must constantly monitor our margins and seek ways to work more efficiently without compromising quality."
+    </div>
+<script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+    createChat({
+        webhookUrl: "https://rezabbasi.app.n8n.cloud/webhook/Persona-chatbot",
+        webhookConfig: {
+            method: 'POST',
+            headers: {}
+        },
+        target: 'body',
+        mode: 'window',
+        chatInputKey: 'chatInput',
+        chatSessionKey: 'sessionId',
+        metadata: {},
+        showWelcomeScreen: true,
+        defaultLanguage: 'en',
+        initialMessages: [
+            'Hi there! 👋',
+            'My name is Alex. How can I help you?'
+        ],
+        i18n: {
+            en: {
+                title: 'Hi there! 👋',
+                subtitle: "Start a chat.",
+                footer: '',
+                getStarted: 'New Conversation',
+                inputPlaceholder: 'Type your question..',
             },
-            target: '#n8n-chat',
-            mode: 'window',
-            chatInputKey: 'chatInput',
-            chatSessionKey: 'sessionId',
-            metadata: {},
-            showWelcomeScreen: true,
-            defaultLanguage: 'en',
-            initialMessages: [
-                'Hi there! 👋',
-                'My name is Alex. How can I help you?'
-            ],
-            i18n: {
-                en: {
-                    title: 'Hi there! 👋',
-                    subtitle: "Start a chat.",
-                    footer: '',
-                    getStarted: 'New Conversation',
-                    inputPlaceholder: 'Type your question..',
-                },
-            },
-        });
-    </script>
+        },
+    });
+</script>
 </body>
 </html>
